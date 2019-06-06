@@ -3,6 +3,7 @@ puddle = Restaurant.create(name: "The Puddle")
 
 #Menu
 puddle_menu = Menu.create(meal_period: "dinner", restaurant_id: puddle.id)
+Menu.create(meal_period: "lunch", restaurant_id: puddle.id)
 
 #Items
 bluefin = Item.create(name: "Bluefin Tuna, Charred Eggplant", description: "farm raised; Tsukiji sourced; Akami cut; eggplant emulsion(charred eggplant pureed with egg yolk and olive oil); seared, pickled, and diced eggplant; pickling liquid - rice wine vinegar, sugar", section: "crudi", picture: "https://lh3.googleusercontent.com/RldurcozITD5gMli2FnqkoB3g3qKVySSu-rc6A7Q4EONMGQBf3pj5ut840vNikvaer_zjDhrT3d4ldaJPYvlIuToG_mtT7DXcNN8h30JnCLBvGeNrFrOgfE_7JZErKtGkUrmcfXgr6YwfyUQ")
