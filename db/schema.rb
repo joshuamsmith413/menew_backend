@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 2019_06_05_181927) do
 
   create_table "items", force: :cascade do |t|
     t.string "name"
-    t.string "allergens"
     t.string "description"
     t.string "section"
     t.string "picture"
