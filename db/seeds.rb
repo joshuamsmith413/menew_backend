@@ -1,11 +1,14 @@
-#Restaurant
+#-------------the puddle----------------
+
+#Restaurant-----------------------------
 puddle = Restaurant.create(name: "The Puddle")
 
-#Menu
-puddle_menu = Menu.create(meal_period: "dinner", restaurant_id: puddle.id)
-Menu.create(meal_period: "lunch", restaurant_id: puddle.id)
+#Menu-----------------------------------
+puddle_din = Menu.create(meal_period: "dinner", restaurant_id: puddle.id)
+punddle_lunch = Menu.create(meal_period: "lunch", restaurant_id: puddle.id)
 
-#Items
+
+#Items----------------------------------
 bluefin = Item.create(name: "Bluefin Tuna, Charred Eggplant", description: "farm raised; Tsukiji sourced; Akami cut; eggplant emulsion(charred eggplant pureed with egg yolk and olive oil); seared, pickled, and diced eggplant; pickling liquid - rice wine vinegar, sugar", section: "crudi", picture: "https://lh3.googleusercontent.com/RldurcozITD5gMli2FnqkoB3g3qKVySSu-rc6A7Q4EONMGQBf3pj5ut840vNikvaer_zjDhrT3d4ldaJPYvlIuToG_mtT7DXcNN8h30JnCLBvGeNrFrOgfE_7JZErKtGkUrmcfXgr6YwfyUQ")
 
 fluke = Item.create(name: "Fluke Ceviche, Mango & Sancho Peppercorns", description: "cubed fluke; marinated in olive oil, fresh lime and orange juice; coins of mango; brushed with sancho pepercorn oil; orange lime zest", section: "crudi", picture: "https://lh3.googleusercontent.com/XHBvJPnKTeBAIvbS3QxprXyxgeaZU--hqQkaEpjGnhEr-hznqxvaBEJGSZIxoPPqqjSdKslkBKlCl_ER2YlQgazYml4JSBqqP9qfEo2xLRb4W6VK_FY-Kx3fS1XJ9qYW3jAssBkr3mUjJrs2")
@@ -40,25 +43,25 @@ sole = Item.create(name: "Dover Sole Meuniere", description: "from Brittany; roa
 
 
 
-#MenuItem
-MenuItem.create(menu_id: puddle.id, item_id: bluefin.id)
-MenuItem.create(menu_id: puddle.id, item_id: fluke.id)
-MenuItem.create(menu_id: puddle.id, item_id: tuna_toast.id)
-MenuItem.create(menu_id: puddle.id, item_id: uni_toast.id)
-MenuItem.create(menu_id: puddle.id, item_id: scampi.id)
-MenuItem.create(menu_id: puddle.id, item_id: gnudi.id)
-MenuItem.create(menu_id: puddle.id, item_id: beet.id)
-MenuItem.create(menu_id: puddle.id, item_id: halibut.id)
-MenuItem.create(menu_id: puddle.id, item_id: monkfish.id)
-MenuItem.create(menu_id: puddle.id, item_id: dory.id)
-MenuItem.create(menu_id: puddle.id, item_id: strip.id)
-MenuItem.create(menu_id: puddle.id, item_id: duck.id)
-MenuItem.create(menu_id: puddle.id, item_id: sole.id)
-MenuItem.create(menu_id: puddle.id, item_id: lettuces.id)
-MenuItem.create(menu_id: puddle.id, item_id: anchovy_toast.id)
-MenuItem.create(menu_id: puddle.id, item_id: lubina.id)
+#MenuItem-----------------------------------
+MenuItem.create(menu_id: puddle_din.id, item_id: bluefin.id)
+MenuItem.create(menu_id: puddle_din.id, item_id: fluke.id)
+MenuItem.create(menu_id: puddle_din.id, item_id: tuna_toast.id)
+MenuItem.create(menu_id: puddle_din.id, item_id: uni_toast.id)
+MenuItem.create(menu_id: puddle_din.id, item_id: scampi.id)
+MenuItem.create(menu_id: puddle_din.id, item_id: gnudi.id)
+MenuItem.create(menu_id: puddle_din.id, item_id: beet.id)
+MenuItem.create(menu_id: puddle_din.id, item_id: halibut.id)
+MenuItem.create(menu_id: puddle_din.id, item_id: monkfish.id)
+MenuItem.create(menu_id: puddle_din.id, item_id: dory.id)
+MenuItem.create(menu_id: puddle_din.id, item_id: strip.id)
+MenuItem.create(menu_id: puddle_din.id, item_id: duck.id)
+MenuItem.create(menu_id: puddle_din.id, item_id: sole.id)
+MenuItem.create(menu_id: puddle_din.id, item_id: lettuces.id)
+MenuItem.create(menu_id: puddle_din.id, item_id: anchovy_toast.id)
+MenuItem.create(menu_id: puddle_din.id, item_id: lubina.id)
 
-#Allergen
+#Allergen--------------------------------
 dairy = Allergen.create(name: "Dairy")
 gluten = Allergen.create(name: "Gluten")
 egg = Allergen.create(name: "Egg")
@@ -70,7 +73,7 @@ alcohol = Allergen.create(name: "Alcohol")
 nut = Allergen.create(name: "Nut")
 pork = Allergen.create(name: "Pork")
 
-#AllergenItem
+#AllergenItem----------------------------
 AllergenItem.create(item_id: lubina.id, allergen_id: allium.id)
 AllergenItem.create(item_id: anchovy_toast.id, allergen_id: allium.id)
 AllergenItem.create(item_id: anchovy_toast.id, allergen_id: nightshade.id)
@@ -120,3 +123,74 @@ AllergenItem.create(item_id: tuna_toast.id,
 allergen_id: allium.id)
 AllergenItem.create(item_id: tuna_toast.id,
 allergen_id: seeds.id)
+
+
+#------------------cockscomb------------------
+
+#restaurants----------------------------------
+
+cockscomb = Restaurant.create(name: "Cockscomb")
+
+#menus---------------------------------------
+
+cockscomb_lunch = Menu.create(meal_period: "lunch", restaurant_id: cockscomb.id)
+cockscomb_din = Menu.create(meal_period: "dinner", restaurant_id: cockscomb.id)
+
+#items---------------------------------------
+mediumShellfish = Item.create(name: "Medium Shellfish Platter", description: "12 oysters; 6 clams; 1/2 crab; hot sauce, tomatillo, mignonette", section: "shellfish", picture: "http://www.anniehoa.com/restaurants/Cockscomb/NEXT/17.jpg")
+
+hotMess = Item.create(name: "Hot Mess", description: "Pan seared foie gras from Sonoma Ducks; Sourghdough toast; braised trotters; pork jus; strawberry jam; pickled green strawberries; scallions", section: "Butcher's Choice", picture: "http://www.anniehoa.com/restaurants/Cockscomb/NEXT/4.jpg")
+
+calfsUdder = Item.create(name: "braised and grilled calf's udder; morels; cream sauce", section: "Butcher's Choice", picture: "https://d3rsl50p8hwbdu.cloudfront.net/medium_24133e87-a7a3-40de-a507-238302cb77f5.png")
+
+quail = Item.create(name: "Quail Tetrazzini", description: "Pan seared and basted quail; shallots; thyme; garlic; mushrooms; deglazed in white wine; chicken stock; creme fraiche; crispy angel hair pasta", section: "Supper", picture: "https://cbssanfran.files.wordpress.com/2015/04/rec.jpg")
+
+eastonBurger = Item.create(name: " 'Ham' Burger", description: "pork shoulder burger; inspired by chef's son who asked why is it called a hamburger?; bread and butter pickles; grilled onions; gruyere; dijon; aioli bib lettuce; home fries; side of aioli", section: "Supper", picture: "https://insidescoopsf.sfgate.com/wp-content/blogs.dir/732/files/cockscomb/bauer0125_cockscomb_1743.jpg")
+
+#menuItem-----------------------------------
+MenuItem.create(menu_id: cockscomb_lunch.id, item_id: mediumShellfish.id)
+MenuItem.create(menu_id: cockscomb_din.id, item_id: mediumShellfish.id)
+MenuItem.create(menu_id: cockscomb_din.id, item_id: hotMess.id)
+MenuItem.create(menu_id: cockscomb_din.id, item_id: calfsUdder.id)
+MenuItem.create(menu_id: cockscomb_din.id, item_id: quail.id)
+
+
+
+#AllergenItem-------------------------------
+AllergenItem.create(item_id: quail.id, allergen_id: dairy.id)
+AllergenItem.create(item_id: quail.id, allergen_id: gluten.id)
+AllergenItem.create(item_id: quail.id, allergen_id: alcohol.id)
+AllergenItem.create(item_id: calfsUdder.id, allergen_id: dairy.id)
+AllergenItem.create(item_id: mediumShellfish.id, allergen_id: allium.id)
+AllergenItem.create(item_id: mediumShellfish.id, allergen_id: shellfish.id)
+AllergenItem.create(item_id: hotMess.id, allergen_id: hotMess.id)
+AllergenItem.create(item_id: hotMess.id, allergen_id: gluten.id)
+
+
+
+
+
+
+
+
+#--------------Terrace----------------------
+
+#Restaurant---------------------------------
+
+terrace = Restaurant.create(name: "Terrace at EDITION")
+
+#menu---------------------------------------
+terrace_din = Menu.create(meal_period: "dinner", restaurant_id: terrace.id)
+
+#items--------------------------------------
+carrot_bolognese = Item.create(name: "Carrot Bolognese", description: "someone forgot the beef", section: "pasta", picture: "https://lh6.googleusercontent.com/tnmNjfoHJBz60iQ1km5bT0gvk1kJjI-x06fWQdN37MOI3uxBcW3W8KxjlbrMdWpWVZcFUL8sWVOc6BkVsOMAtNgDVtTdYeNjYDIoeKiiSGk-JZdVe1FlzGR5Af-31v2wV5Psxdxn")
+# Item.create(name: "", description: "", section: "", picture: "")
+
+
+#menuItem-----------------------------------
+MenuItem.create(menu_id: terrace.id, item_id: carrot_bolognese.id )
+# MenuItem.create(menu_id: terrace.id, item_id: )
+
+#AllergenItem-------------------------------
+AllergenItem.create(item_id: carrot_bolognese.id, allergen_id: allium.id)
+# AllergenItem.create(item_id: , allergen_id:)
