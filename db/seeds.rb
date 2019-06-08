@@ -72,6 +72,10 @@ shellfish = Allergen.create(name: "shellfish")
 alcohol = Allergen.create(name: "Alcohol")
 nut = Allergen.create(name: "Nut")
 pork = Allergen.create(name: "Pork")
+garlic = Allergen.create(name: "Garlic")
+pinenut = Allergen.create(name: "Pine Nut")
+pepper = Allergen.create(name: "Pepper")
+
 
 #AllergenItem----------------------------
 AllergenItem.create(item_id: lubina.id, allergen_id: allium.id)
@@ -137,15 +141,15 @@ cockscomb_lunch = Menu.create(meal_period: "lunch", restaurant_id: cockscomb.id)
 cockscomb_din = Menu.create(meal_period: "dinner", restaurant_id: cockscomb.id)
 
 #items---------------------------------------
-mediumShellfish = Item.create(name: "Medium Shellfish Platter", description: "12 oysters; 6 clams; 1/2 crab; hot sauce, tomatillo, mignonette", section: "shellfish", picture: "http://www.anniehoa.com/restaurants/Cockscomb/NEXT/17.jpg")
+mediumShellfish = Item.create(name: "Medium Shellfish Platter", description: "12 oysters; 6 clams; 1/2 crab; hot sauce, tomatillo, mignonette", section: "shellfish", picture: "http://www.anniehoa.com/restaurants/Cockscomb/NEXT/17.jpg", oneliner: "Almost a large.")
 
-hotMess = Item.create(name: "Hot Mess", description: "Pan seared foie gras from Sonoma Ducks; Sourghdough toast; braised trotters; pork jus; strawberry jam; pickled green strawberries; scallions", section: "Butcher's Choice", picture: "http://www.anniehoa.com/restaurants/Cockscomb/NEXT/4.jpg")
+hotMess = Item.create(name: "Hot Mess", description: "Pan seared foie gras from Sonoma Ducks; Sourghdough toast; braised trotters; pork jus; strawberry jam; pickled green strawberries; scallions", section: "Butcher's Choice", picture: "http://www.anniehoa.com/restaurants/Cockscomb/NEXT/4.jpg", oneliner: "Hot mess Of deliciousness")
 
-calfsUdder = Item.create(name: "braised and grilled calf's udder; morels; cream sauce", section: "Butcher's Choice", picture: "https://d3rsl50p8hwbdu.cloudfront.net/medium_24133e87-a7a3-40de-a507-238302cb77f5.png")
+calfsUdder = Item.create(name: "braised and grilled calf's udder; morels; cream sauce", section: "Butcher's Choice", picture: "https://d3rsl50p8hwbdu.cloudfront.net/medium_24133e87-a7a3-40de-a507-238302cb77f5.png", oneliner: "What other sauce would you use for calf's udder?")
 
-quail = Item.create(name: "Quail Tetrazzini", description: "Pan seared and basted quail; shallots; thyme; garlic; mushrooms; deglazed in white wine; chicken stock; creme fraiche; crispy angel hair pasta", section: "Supper", picture: "https://cbssanfran.files.wordpress.com/2015/04/rec.jpg")
+quail = Item.create(name: "Quail Tetrazzini", description: "Pan seared and basted quail; shallots; thyme; garlic; mushrooms; deglazed in white wine; chicken stock; creme fraiche; crispy angel hair pasta", section: "Supper", picture: "https://cbssanfran.files.wordpress.com/2015/04/rec.jpg", oneliner: "Named after Luisa Tetrazzini, an Italian Opera singer. The dish was created by the Palace Hotel for her.")
 
-eastonBurger = Item.create(name: " 'Ham' Burger", description: "pork shoulder burger; inspired by chef's son who asked why is it called a hamburger?; bread and butter pickles; grilled onions; gruyere; dijon; aioli bib lettuce; home fries; side of aioli", section: "Supper", picture: "https://insidescoopsf.sfgate.com/wp-content/blogs.dir/732/files/cockscomb/bauer0125_cockscomb_1743.jpg")
+eastonBurger = Item.create(name: " 'Ham' Burger", description: "pork shoulder burger; bread and butter pickles; grilled onions; gruyere; dijon; aioli bib lettuce; home fries; side of aioli", section: "Supper", picture: "https://insidescoopsf.sfgate.com/wp-content/blogs.dir/732/files/cockscomb/bauer0125_cockscomb_1743.jpg", oneliner: "inspired by chef's son who asked why is it called a hamburger?")
 
 #menuItem-----------------------------------
 MenuItem.create(menu_id: cockscomb_lunch.id, item_id: mediumShellfish.id)
@@ -167,12 +171,6 @@ AllergenItem.create(item_id: hotMess.id, allergen_id: hotMess.id)
 AllergenItem.create(item_id: hotMess.id, allergen_id: gluten.id)
 
 
-
-
-
-
-
-
 #--------------Terrace----------------------
 
 #Restaurant---------------------------------
@@ -183,14 +181,43 @@ terrace = Restaurant.create(name: "Terrace at EDITION")
 terrace_din = Menu.create(meal_period: "dinner", restaurant_id: terrace.id)
 
 #items--------------------------------------
-carrot_bolognese = Item.create(name: "Carrot Bolognese", description: "someone forgot the beef", section: "pasta", picture: "https://lh6.googleusercontent.com/tnmNjfoHJBz60iQ1km5bT0gvk1kJjI-x06fWQdN37MOI3uxBcW3W8KxjlbrMdWpWVZcFUL8sWVOc6BkVsOMAtNgDVtTdYeNjYDIoeKiiSGk-JZdVe1FlzGR5Af-31v2wV5Psxdxn")
-# Item.create(name: "", description: "", section: "", picture: "")
+carrot_bolognese = Item.create(name: "Carrot Bolognese", description: "Vegetarian carrot bolognese with shaved Brussels sprouts, shaved carrot coins, basil and honey", section: "pasta + grains", picture: "https://lh6.googleusercontent.com/tnmNjfoHJBz60iQ1km5bT0gvk1kJjI-x06fWQdN37MOI3uxBcW3W8KxjlbrMdWpWVZcFUL8sWVOc6BkVsOMAtNgDVtTdYeNjYDIoeKiiSGk-JZdVe1FlzGR5Af-31v2wV5Psxdxn", oneliner: "Carrot bolognese, Brussels sprouts, basil and honey")
+
+
+cacio = Item.create(name: "Broccoli Cacio e Pepe", description: "Housemade rigatoni with butter, black pepper, and parmesan, dressed with broccoli planks and cous cous.", section: "pasta + grains", picture: "https://lh6.googleusercontent.com/Wx-ZqKpsVKkyza7yAivLYDoM5n9OGq9XpxqEcZcX3lSyRtORJ5o1fq3p7orTU6Kv7NrxmV3ssGY5lxuBZAaRsPzdz-t5c__28-3Hu_XlVUkctNuBHsml9Quyxo4BBxYIOgj40EWJ", oneliner: "Cacio e pepe with broccoli and cous cous")
+
+artichoke_farotto = Item.create(name: "Artichoke Farotto", description: "Farro cooked risotto style with leeks and pecorino, topped with confit artichoke, shaved truffles and pea greens.", section: "pasta + grains", picture: "https://lh5.googleusercontent.com/wOxSHFevIGB2VGSNdd8cYFYpW853f1FeYoSva-Vg3TdejHFNq7K2Yp8MTVbHYR-SwF_XO7BEVmVBgXBr4XPPjqOxkkS6TeYuaBgD1dx0EpfFYl1Jk7aCb3a1MRvqoR07NsOmk-O3", oneliner: "Artichoke farotto with leeks and truffles")
+
+tagliatelle = Item.create(name: "King Crab Tagliatelle", description: "Housemade tagliatelle tossed with pickled cherry pepper and garlic confit, finished with fresh parsley, chunks of king crab and sourdough breadcrumbs. ", section: "", picture: "", oneliner: "King crab tagliatelle with cherry peppers and sourdough breadcrumbs.")
+
+burger = Item.create(name: "Billboard Burger", description: "Dry-aged 10oz Pat LaFrieda burger served on a sesame-brioche bun topped with mushroom-bacon jam and served with fries and pickled peppers.", section: "entrees", picture: "https://lh5.googleusercontent.com/IKagqHTLDor382jwuiTeIAmBcXUyMCFP9DMwncxbPEdQkH_9gUcK8FoNe3Cpm6xCBm9FtMcVsKJ9hWFfzapCWD3JKYANvN2fRToljz-A7Cdu3lvxkIJm9PhCXVzN8PPwOLqu-yh_", oneliner: "Billboard burger with mushroom-bacon jam and jojo fries.")
 
 
 #menuItem-----------------------------------
-MenuItem.create(menu_id: terrace.id, item_id: carrot_bolognese.id )
-# MenuItem.create(menu_id: terrace.id, item_id: )
+MenuItem.create(menu_id: terrace.id, item_id: carrot_bolognese.id)
+MenuItem.create(menu_id: terrace.id, item_id: cacio.id)
+MenuItem.create(menu_id: terrace.id, item_id: artichoke_farotto.id)
+MenuItem.create(menu_id: terrace.id, item_id: tagliatelle.id)
+MenuItem.create(menu_id: terrace.id, item_id: burger.id)
 
 #AllergenItem-------------------------------
 AllergenItem.create(item_id: carrot_bolognese.id, allergen_id: allium.id)
-# AllergenItem.create(item_id: , allergen_id:)
+AllergenItem.create(item_id: carrot_bolognese.id, allergen_id: gluten.id)
+AllergenItem.create(item_id: carrot_bolognese.id, allergen_id: garlic.id)
+AllergenItem.create(item_id: carrot_bolognese.id, allergen_id: nut.id)
+AllergenItem.create(item_id: cacio.id, allergen_id: dairy.id)
+AllergenItem.create(item_id: cacio.id, allergen_id: gluten.id)
+AllergenItem.create(item_id: cacio.id, allergen_id: pepper.id)
+AllergenItem.create(item_id: cacio.id, allergen_id: pinenut.id)
+AllergenItem.create(item_id: artichoke_farotto.id, allergen_id: gluten.id)
+AllergenItem.create(item_id: artichoke_farotto.id, allergen_id: dairy.id)
+AllergenItem.create(item_id: artichoke_farotto.id, allergen_id: allium.id)
+AllergenItem.create(item_id: tagliatelle.id, allergen_id: dairy.id)
+AllergenItem.create(item_id: tagliatelle.id, allergen_id: gluten.id)
+AllergenItem.create(item_id: tagliatelle.id, allergen_id: shellfish.id)
+AllergenItem.create(item_id: tagliatelle.id, allergen_id: allium.id)
+AllergenItem.create(item_id: tagliatelle.id, allergen_id: garlic.id)
+AllergenItem.create(item_id: burger.id, allergen_id: gluten.id)
+AllergenItem.create(item_id: burger.id, allergen_id: dairy.id)
+AllergenItem.create(item_id: burger.id, allergen_id: allium.id)
+AllergenItem.create(item_id: burger.id, allergen_id: seeds.id)

@@ -1,0 +1,5 @@
+class AddOnelinerToItems < ActiveRecord::Migration[5.2]
+  def change
+    add_column :items, :oneliner, :string
+  end
+end

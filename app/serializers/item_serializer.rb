@@ -1,6 +1,6 @@
 class ItemSerializer < ActiveModel::Serializer
-  attributes :id, :name, :description, :section, :picture, :allergens
-  
+  attributes :id, :name, :description, :section, :picture, :oneliner, :allergens
+
   has_many :allergens
   # has_many :menu_items
   # has_many :allergen_items
