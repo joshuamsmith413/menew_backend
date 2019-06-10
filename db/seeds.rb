@@ -75,6 +75,7 @@ pork = Allergen.create(name: "Pork")
 garlic = Allergen.create(name: "Garlic")
 pinenut = Allergen.create(name: "Pine Nut")
 pepper = Allergen.create(name: "Pepper")
+soy = Allergen.create(name: "Soy")
 
 
 #AllergenItem----------------------------
@@ -157,6 +158,8 @@ MenuItem.create(menu_id: cockscomb_din.id, item_id: mediumShellfish.id)
 MenuItem.create(menu_id: cockscomb_din.id, item_id: hotMess.id)
 MenuItem.create(menu_id: cockscomb_din.id, item_id: calfsUdder.id)
 MenuItem.create(menu_id: cockscomb_din.id, item_id: quail.id)
+MenuItem.create(menu_id: cockscomb_din.id, item_id: eastonBurger.id)
+MenuItem.create(menu_id: cockscomb_lunch.id, item_id: eastonBurger.id)
 
 
 
@@ -173,6 +176,8 @@ AllergenItem.create(item_id: hotMess.id, allergen_id: gluten.id)
 
 #--------------Terrace----------------------
 
+#--------------Terrace----------------------
+
 #Restaurant---------------------------------
 
 terrace = Restaurant.create(name: "Terrace at EDITION")
@@ -183,22 +188,53 @@ terrace_din = Menu.create(meal_period: "dinner", restaurant_id: terrace.id)
 #items--------------------------------------
 carrot_bolognese = Item.create(name: "Carrot Bolognese", description: "Vegetarian carrot bolognese with shaved Brussels sprouts, shaved carrot coins, basil and honey", section: "pasta + grains", picture: "https://lh6.googleusercontent.com/tnmNjfoHJBz60iQ1km5bT0gvk1kJjI-x06fWQdN37MOI3uxBcW3W8KxjlbrMdWpWVZcFUL8sWVOc6BkVsOMAtNgDVtTdYeNjYDIoeKiiSGk-JZdVe1FlzGR5Af-31v2wV5Psxdxn", oneliner: "Carrot bolognese, Brussels sprouts, basil and honey")
 
+cacio = Item.create(name: "Broccoli Cacio e Pepe", description: "Housemade rigatoni with butter, black pepper, and parmesan, dressed with broccoli planks and cous cous", section: "pasta + grains", picture: "https://lh6.googleusercontent.com/Wx-ZqKpsVKkyza7yAivLYDoM5n9OGq9XpxqEcZcX3lSyRtORJ5o1fq3p7orTU6Kv7NrxmV3ssGY5lxuBZAaRsPzdz-t5c__28-3Hu_XlVUkctNuBHsml9Quyxo4BBxYIOgj40EWJ", oneliner: "Cacio e pepe with broccoli and cous cous")
 
-cacio = Item.create(name: "Broccoli Cacio e Pepe", description: "Housemade rigatoni with butter, black pepper, and parmesan, dressed with broccoli planks and cous cous.", section: "pasta + grains", picture: "https://lh6.googleusercontent.com/Wx-ZqKpsVKkyza7yAivLYDoM5n9OGq9XpxqEcZcX3lSyRtORJ5o1fq3p7orTU6Kv7NrxmV3ssGY5lxuBZAaRsPzdz-t5c__28-3Hu_XlVUkctNuBHsml9Quyxo4BBxYIOgj40EWJ", oneliner: "Cacio e pepe with broccoli and cous cous")
+artichoke_farotto = Item.create(name: "Artichoke Farotto", description: "Farro cooked risotto style with leeks and pecorino, topped with confit artichoke, shaved truffles and pea greens", section: "pasta + grains", picture: "https://lh5.googleusercontent.com/wOxSHFevIGB2VGSNdd8cYFYpW853f1FeYoSva-Vg3TdejHFNq7K2Yp8MTVbHYR-SwF_XO7BEVmVBgXBr4XPPjqOxkkS6TeYuaBgD1dx0EpfFYl1Jk7aCb3a1MRvqoR07NsOmk-O3", oneliner: "Artichoke farotto with leeks and truffles")
 
-artichoke_farotto = Item.create(name: "Artichoke Farotto", description: "Farro cooked risotto style with leeks and pecorino, topped with confit artichoke, shaved truffles and pea greens.", section: "pasta + grains", picture: "https://lh5.googleusercontent.com/wOxSHFevIGB2VGSNdd8cYFYpW853f1FeYoSva-Vg3TdejHFNq7K2Yp8MTVbHYR-SwF_XO7BEVmVBgXBr4XPPjqOxkkS6TeYuaBgD1dx0EpfFYl1Jk7aCb3a1MRvqoR07NsOmk-O3", oneliner: "Artichoke farotto with leeks and truffles")
+tagliatelle = Item.create(name: "King Crab Tagliatelle", description: "Housemade tagliatelle tossed with pickled cherry pepper and garlic confit, finished with fresh parsley, chunks of king crab and sourdough breadcrumbs. ", section: "pasta + grains", picture: "https://lh4.googleusercontent.com/bBbYVafGhTAAwh3OvhZGDNndnLV_EfZ3xecvAQFZZ9UJHlIYDtANkRRxFnMufpISNYGXAm78vu4-OmgaJ2PnFDc862ezx9zS8KYcjHvY5F8Lbikncp5Qsjo33OZGEEClmfP8resI", oneliner: "King crab tagliatelle with cherry peppers and sourdough breadcrumbs")
 
-tagliatelle = Item.create(name: "King Crab Tagliatelle", description: "Housemade tagliatelle tossed with pickled cherry pepper and garlic confit, finished with fresh parsley, chunks of king crab and sourdough breadcrumbs. ", section: "", picture: "", oneliner: "King crab tagliatelle with cherry peppers and sourdough breadcrumbs.")
+burger = Item.create(name: "Billboard Burger", description: "Dry-aged 10oz Pat LaFrieda burger served on a sesame-brioche bun topped with mushroom-bacon jam and served with fries and pickled peppers", section: "entrees", picture: "https://lh5.googleusercontent.com/IKagqHTLDor382jwuiTeIAmBcXUyMCFP9DMwncxbPEdQkH_9gUcK8FoNe3Cpm6xCBm9FtMcVsKJ9hWFfzapCWD3JKYANvN2fRToljz-A7Cdu3lvxkIJm9PhCXVzN8PPwOLqu-yh_", oneliner: "Billboard burger with mushroom-bacon jam and jojo fries")
 
-burger = Item.create(name: "Billboard Burger", description: "Dry-aged 10oz Pat LaFrieda burger served on a sesame-brioche bun topped with mushroom-bacon jam and served with fries and pickled peppers.", section: "entrees", picture: "https://lh5.googleusercontent.com/IKagqHTLDor382jwuiTeIAmBcXUyMCFP9DMwncxbPEdQkH_9gUcK8FoNe3Cpm6xCBm9FtMcVsKJ9hWFfzapCWD3JKYANvN2fRToljz-A7Cdu3lvxkIJm9PhCXVzN8PPwOLqu-yh_", oneliner: "Billboard burger with mushroom-bacon jam and jojo fries.")
+cauliflower = Item.create(name: "Skillet Cauliflower", description: "Oven-roasted cauliflower with cinnamon, black pepper and tumeric, dressed with mint sauce and garnished with champagne vinegar, cilantro, fresno chiles and apricot", section: "entrees", picture: "https://lh5.googleusercontent.com/3ynCeCfD2V9WQRsGdijSMphTLvjyjiP67a0Wi0Ez--ekUVjhmNLiOuVTbJYo-ZnLFgM2hZZql39b5PmH4br4ZPIPM_xzrP8fwZ-Ffr9Iw-kxls_t2dpmsXWxDpwAzybu4E93yDfB", oneliner: "Skillet cauliflower with mint sauce, fresno chiles and apricot")
 
+swordfish = Item.create(name: "Swordfish a la Plancha", description: "Swordfish a la plancha dressed with cajun butter and seasonings over Anson Mills grits, garnished with morels, asparagus and pickled ramps", section: "entrees", picture: "", oneliner: "Swordfish with cajun butter, morels and asparagus")
+
+salmon = Item.create(name: "Center Cut Salmon", description: "Deboned, center-cut wild Norwegian salmon stuffed with cured lemon, parsley and thyme and dressed with pearl onions, dill and uni hollandaise", section: "entrees", picture: "https://lh4.googleusercontent.com/MbH2E4FN-0FpGwWZKkPiOyt_Du1FJGpvJ7oBc8_E-n0VeOMELyD3EV1v9PdO1WQT9yHz79hW9eyH4C2Za-FTqa5BRjBo6J7WdD2JJKO_HA_Ohly7DhHE5LkAeDeKu17QjLnl46Nw", oneliner: "Center cut salmon, pearl onions, uni hollandaise")
+
+scallop = Item.create(name: "Roasted Scallops", description: "Atlantic diver scallops pan-seared and roasted in butter with fiddlehead ferns, dressed with demi-sec tomatoes and a gigante bean vinaigrette, garnished with dandalion and nasturtium", section: "entrees", picture: "", oneliner: "Roasted scallops, demi-sec tomatoes, fiddlehead ferns")
+
+chicken = Item.create(name: "Rye Fried Chicken Katsu", description: "Rye Fried chicken with mint-pea puree, shaved radish salad and whole grain mustard", section: "entrees", picture: "https://lh3.googleusercontent.com/BPtwDuRDIrHXT6ZQ7Imw6nyB6aTklEtFRL1iT6Mk3UYw1HwUKWWqjeKC1LVk-TIwawaSZCn2tF15VFWAYqoWnwv1Rz9M1GU3tBESYXqy9mywRaTuD9cpMFwaEqj4xC4XOhuMRTBq", oneliner: "Rye fried chicken katsu, radish salad, whole grain mustard")
+
+lamb_rack = Item.create(name: "Spiced Colorado Lamb Rack", description: "Colorado lamb rack encrusted in coriander, fennel and cumin over charred Persian cucumber salad and cumin-black pepper yogurt", section: "entrees", picture: "", oneliner: "Colorado lamb rack, cucumber salad, black-pepper yogurt")
+
+filet = Item.create(name: "Center Cut Filet Mignon", description: "Center cut prime filet mignon dressed with bone marrow butter, served with garlic confit, miso spinach and cabernet salt", section: "entrees", picture: "https://lh6.googleusercontent.com/IKMTNpKfAZD2H6BonH8SW8WaDt1RvLvmkwvJIzQwgayJihxNOwh4jrJhA0_KY_dwo3nc-_NfA4a47kJ_KDE3c1NOPiiXxMzyIXT7VeVD2y3TewndpscmAsnX0-3v8E7BIIzqALlU", oneliner: "Filet mignon, bone marrow butter, miso spinach")
+
+focaccia = Item.create(name: "Deep Dish Focaccia", description: "Deep Dish Focaccia topped with smoked mozzarella, spiced tomatoes and freshly-snipped basil", section: "appetizers", picture: "https://lh3.googleusercontent.com/6-i-P535Rmjp5P7xfvcLfG1_SJQgcIeIJzHaxNF-FVTvv0_NiiZUM6PBd0Qgs7zm0nVA4HG8oQvkm0imSdlvjzKRcdDssJQiZSDDdvNzvOOqMFQNz_cfMJNAmzVcwWyVZvetc08r", oneliner: "Deep dish foccacia, smoked mozzarella, basil")
+
+mushroom_carpaccio = Item.create(name: "Mushroom Carpaccio", description: "Thinly sliced king trumpet mushrooms, topped with fennel barigoule, toasted hazelnuts, arugula, black pepper and spices", section: "appetizers", picture: "https://lh5.googleusercontent.com/VZhebxEuEjvATMSzHwn5ASqYAh1ytJ7465pF1PwStKSGINKCKLvABvI0fvQ-zniPlblIW5U5dPxciChEKwatiIdtbFHDrCnJf9YSMgwXp2Mza_RKltQOHfb1xC8NnLyivFJPMhpc", oneliner: "Mushroom carpaccio, toasted hazelnuts, parmesan")
+
+leeks = Item.create(name: "Marinated Leeks", description: "Leeks marinated in champagne vinaigrette, topped with gribiche, pickled turnips, malted fingerling potato chips, and dill", section: "appetizers", picture: "https://lh5.googleusercontent.com/zS2Y44C-x1R_CZ6mfzOkMAz004Cr7nHHDUZaPpL7BvHewKSVPzSgNzqYUt6GssvaL4_meZo2w9g2ULlmOuFKQHdYAiK5KCVZPOyckXzVGjZyRlfb-oTshcmZKu0w-v63XyulyRnt", oneliner: "Marinated leeks, fingerling potato chips, pickled turnips")
+
+tuna_crudo = Item.create(name: "Tuna Crudo", description: "Tuna crudo with diced cucumber, radishes, and brunoised jalapeno, tossed in ponzu and layered over thinly sliced avocado, garnished with micro herbs", section: "appetizers", picture: "https://lh3.googleusercontent.com/ke0BUSAHIu6dXr6_MiNb71o5SGJyo3k_ynVwoVVgSF79hp-arBWZ-ZB_qSM9Ewbb3BxI0KMt14YUlK1-GDdRc3dlgwA-iN6Hlr439cMHTHEijCvPe-7XkDJlcD_cf24r0fI3m6b0", oneliner: "Tuna crudo, sliced avocado, white ponzu")
 
 #menuItem-----------------------------------
-MenuItem.create(menu_id: terrace.id, item_id: carrot_bolognese.id)
-MenuItem.create(menu_id: terrace.id, item_id: cacio.id)
-MenuItem.create(menu_id: terrace.id, item_id: artichoke_farotto.id)
-MenuItem.create(menu_id: terrace.id, item_id: tagliatelle.id)
-MenuItem.create(menu_id: terrace.id, item_id: burger.id)
+MenuItem.create(menu_id: terrace_din.id, item_id: carrot_bolognese.id)
+MenuItem.create(menu_id: terrace_din.id, item_id: cacio.id)
+MenuItem.create(menu_id: terrace_din.id, item_id: artichoke_farotto.id)
+MenuItem.create(menu_id: terrace_din.id, item_id: tagliatelle.id)
+MenuItem.create(menu_id: terrace_din.id, item_id: burger.id)
+MenuItem.create(menu_id: terrace_din.id, item_id: cauliflower.id)
+MenuItem.create(menu_id: terrace_din.id, item_id: swordfish.id)
+MenuItem.create(menu_id: terrace_din.id, item_id: salmon.id)
+MenuItem.create(menu_id: terrace_din.id, item_id: scallop.id)
+MenuItem.create(menu_id: terrace_din.id, item_id: chicken.id)
+MenuItem.create(menu_id: terrace_din.id, item_id: lamb_rack.id)
+MenuItem.create(menu_id: terrace_din.id, item_id: filet.id)
+MenuItem.create(menu_id: terrace_din.id, item_id: focaccia.id)
+MenuItem.create(menu_id: terrace_din.id, item_id: mushroom_carpaccio.id)
+MenuItem.create(menu_id: terrace_din.id, item_id: leeks.id)
+MenuItem.create(menu_id: terrace_din.id, item_id: tuna_crudo.id)
 
 #AllergenItem-------------------------------
 AllergenItem.create(item_id: carrot_bolognese.id, allergen_id: allium.id)
@@ -221,3 +257,39 @@ AllergenItem.create(item_id: burger.id, allergen_id: gluten.id)
 AllergenItem.create(item_id: burger.id, allergen_id: dairy.id)
 AllergenItem.create(item_id: burger.id, allergen_id: allium.id)
 AllergenItem.create(item_id: burger.id, allergen_id: seeds.id)
+AllergenItem.create(item_id: cauliflower.id, allergen_id: allium.id)
+AllergenItem.create(item_id: cauliflower.id, allergen_id: nut.id)
+AllergenItem.create(item_id: cauliflower.id, allergen_id: pepper.id)
+AllergenItem.create(item_id: cauliflower.id, allergen_id: garlic.id)
+AllergenItem.create(item_id: swordfish.id, allergen_id: garlic.id)
+AllergenItem.create(item_id: swordfish.id, allergen_id: dairy.id)
+AllergenItem.create(item_id: swordfish.id, allergen_id: allium.id)
+AllergenItem.create(item_id: salmon.id, allergen_id: allium.id)
+AllergenItem.create(item_id: salmon.id, allergen_id: dairy.id)
+AllergenItem.create(item_id: salmon.id, allergen_id: egg.id)
+AllergenItem.create(item_id: scallop.id, allergen_id: dairy.id)
+AllergenItem.create(item_id: scallop.id, allergen_id: shellfish.id)
+AllergenItem.create(item_id: scallop.id, allergen_id: allium.id)
+AllergenItem.create(item_id: chicken.id, allergen_id: allium.id)
+AllergenItem.create(item_id: chicken.id, allergen_id: gluten.id)
+AllergenItem.create(item_id: chicken.id, allergen_id: egg.id)
+AllergenItem.create(item_id: lamb_rack.id, allergen_id: allium.id)
+AllergenItem.create(item_id: lamb_rack.id, allergen_id: dairy.id)
+AllergenItem.create(item_id: lamb_rack.id, allergen_id: pepper.id)
+AllergenItem.create(item_id: filet.id, allergen_id: allium.id)
+AllergenItem.create(item_id: filet.id, allergen_id: dairy.id)
+AllergenItem.create(item_id: filet.id, allergen_id: soy.id)
+AllergenItem.create(item_id: filet.id, allergen_id: nut.id)
+AllergenItem.create(item_id: filet.id, allergen_id: gluten.id)
+AllergenItem.create(item_id: filet.id, allergen_id: garlic.id)
+AllergenItem.create(item_id: focaccia.id, allergen_id: dairy.id)
+AllergenItem.create(item_id: focaccia.id, allergen_id: gluten.id)
+AllergenItem.create(item_id: mushroom_carpaccio.id, allergen_id: dairy.id)
+AllergenItem.create(item_id: mushroom_carpaccio.id, allergen_id: nut.id)
+AllergenItem.create(item_id: mushroom_carpaccio.id, allergen_id: seeds.id)
+AllergenItem.create(item_id: mushroom_carpaccio.id, allergen_id: pepper.id)
+AllergenItem.create(item_id: leeks.id, allergen_id: allium.id)
+AllergenItem.create(item_id: leeks.id, allergen_id: egg.id)
+AllergenItem.create(item_id: tuna_crudo.id, allergen_id: soy.id)
+AllergenItem.create(item_id: tuna_crudo.id, allergen_id: gluten.id)
+AllergenItem.create(item_id: tuna_crudo.id, allergen_id: pepper.id)
