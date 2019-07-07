@@ -3,4 +3,5 @@ resources :items
 resources :restaurants
 resources :menus
 resources :allergens
+resources :menu_items
 end

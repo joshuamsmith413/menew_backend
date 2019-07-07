@@ -133,7 +133,7 @@ calfsUdder = Item.create(name: "braised and grilled calf's udder; morels; cream 
 
 quail = Item.create(name: "Quail Tetrazzini", description: "Pan seared and basted quail; shallots; thyme; garlic; mushrooms; deglazed in white wine; chicken stock; creme fraiche; crispy angel hair pasta", section: "Supper", picture: "https://cbssanfran.files.wordpress.com/2015/04/rec.jpg", oneliner: "Named after Luisa Tetrazzini, an Italian Opera singer. The dish was created by the Palace Hotel for her.")
 
-eastonBurger = Item.create(name: " 'Ham' Burger", description: "pork shoulder burger; bread and butter pickles; grilled onions; gruyere; dijon; aioli bib lettuce; home fries; side of aioli", section: "Supper", picture: "https://insidescoopsf.sfgate.com/wp-content/blogs.dir/732/files/cockscomb/bauer0125_cockscomb_1743.jpg", oneliner: "inspired by chef's son who asked why is it called a hamburger?")
+eastonBurger = Item.create(name: "'Ham' Burger", description: "pork shoulder burger; bread and butter pickles; grilled onions; gruyere; dijon; aioli bib lettuce; home fries; side of aioli", section: "Supper", picture: "https://insidescoopsf.sfgate.com/wp-content/blogs.dir/732/files/cockscomb/bauer0125_cockscomb_1743.jpg", oneliner: "inspired by chef's son who asked why is it called a hamburger?")
 
 #menuItem-----------------------------------
 MenuItem.create(menu_id: cockscomb_lunch.id, item_id: mediumShellfish.id)
