@@ -131,7 +131,7 @@ hotMess = Item.create(name: "Hot Mess", description: "Pan seared foie gras from 
 
 calfsUdder = Item.create(name: "braised and grilled calf's udder; morels; cream sauce", section: "Butcher's Choice", picture: "https://d3rsl50p8hwbdu.cloudfront.net/medium_24133e87-a7a3-40de-a507-238302cb77f5.png", oneliner: "What other sauce would you use for calf's udder?")
 
-quail = Item.create(name: "Quail Tetrazzini", description: "Pan seared and basted quail; shallots; thyme; garlic; mushrooms; deglazed in white wine; chicken stock; creme fraiche; crispy angel hair pasta", section: "Supper", picture: "https://cbssanfran.files.wordpress.com/2015/04/rec.jpg", oneliner: "Named after Luisa Tetrazzini, an Italian Opera singer. The dish was created by the Palace Hotel for her.")
+quail = Item.create(name: "Quail Tetrazzini", description: "Pan seared and basted quail; shallots; thyme; garlic; mushrooms; deglazed in white wine; chicken stock; creme fraiche; crispy angel hair pasta", section: "Supper", picture: "https://sanfrancisco.cbslocal.com/wp-content/uploads/sites/15116056/2015/04/rec.jpg", oneliner: "Named after Luisa Tetrazzini, an Italian Opera singer. The dish was created by the Palace Hotel for her.")
 
 eastonBurger = Item.create(name: "'Ham' Burger", description: "pork shoulder burger; bread and butter pickles; grilled onions; gruyere; dijon; aioli bib lettuce; home fries; side of aioli", section: "Supper", picture: "https://insidescoopsf.sfgate.com/wp-content/blogs.dir/732/files/cockscomb/bauer0125_cockscomb_1743.jpg", oneliner: "inspired by chef's son who asked why is it called a hamburger?")
 
