@@ -1,7 +1,7 @@
 #-------------the puddle----------------
 
 #Restaurant-----------------------------
-puddle = Restaurant.create(name: "The Puddle")
+puddle = Restaurant.create(name: "The Puddle", picture: "https://cdn.vox-cdn.com/uploads/chorus_asset/file/8884021/POOL_ROOM_SLIDER_02.jpg")
 
 #Menu-----------------------------------
 puddle_din = Menu.create(meal_period: "dinner", restaurant_id: puddle.id)
@@ -117,7 +117,7 @@ AllergenItem.create(item_id: tuna_toast.id, allergen_id: seeds.id)
 
 #restaurants----------------------------------
 
-cockscomb = Restaurant.create(name: "Cockscomb")
+cockscomb = Restaurant.create(name: "Cockscomb", picture: "https://d37219swed47g7.cloudfront.net/media/images/reviews/cockscomb/banners/Cockscomb%20Interior.jpg")
 
 #menus---------------------------------------
 
@@ -163,7 +163,7 @@ AllergenItem.create(item_id: hotMess.id, allergen_id: gluten.id)
 
 #Restaurant---------------------------------
 
-terrace = Restaurant.create(name: "Terrace at EDITION")
+terrace = Restaurant.create(name: "Terrace at EDITION", picture: "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ih78CuULp9OU/v0/2600x-1.jpg")
 
 #menu---------------------------------------
 terrace_din = Menu.create(meal_period: "dinner", restaurant_id: terrace.id)
